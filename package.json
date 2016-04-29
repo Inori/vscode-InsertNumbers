@@ -2,19 +2,29 @@
     "name": "insertnumbers",
     "displayName": "Insert Numbers",
     "description": "insert increasing numbers",
+    "icon": "images/icon.ico",
     "version": "0.9.0",
     "publisher": "Asuka",
     "license": "SEE LICENSE IN LICENSE.TXT",
-    "bugs": {
-        "url": "https://github.com/Microsoft/vscode-spell-check/issues",
-        "email": "smcbreen@microsoft.com"
+    "homepage": "https://github.com/Inori/vscode-InsertNumbers",
+    "galleryBanner": {
+        "color": "#0000FF",
+        "theme": "dark"
     },
-    "engines": {
-        "vscode": "^1.0.0"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Inori/vscode-InsertNumbers.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Inori/vscode-InsertNumbers/issues",
+        "email": "bingkan@outlook.com"
     },
     "categories": [
         "Other"
     ],
+    "engines": {
+        "vscode": "^1.0.0"
+    },
     "activationEvents": [
         "onCommand:extension.insertNumbers"
     ],
