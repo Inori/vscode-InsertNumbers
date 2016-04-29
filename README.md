@@ -20,7 +20,7 @@ There are two ways to change the default format string.
 
     ![dec format](images/dec.gif)
 
-or with start number and step, like `%08X:0:4`:
+    or with start number and step, like `%08X:0:4`:
 
     ![input format](images/hex.gif)
 
