@@ -40,7 +40,28 @@
             "key": "ctrl+alt+n",
             "mac": "cmd+alt+n",
             "when": "editorTextFocus"
-        }]
+        }],
+        
+        "configuration": {
+            "title": "Insert Numbers Configuration",
+            "properties": {
+                "insertnum.formatstr": {
+                    "type": "string",
+                    "default": "%d",
+                    "description": "Format string for sprintf"
+                },
+                "insertnum.start": {
+                    "type": "number",
+                    "default": 0,
+                    "description": "Start number"
+                },
+                "insertnum.step": {
+                    "type": "number",
+                    "default": 1,
+                    "description": "Step"
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
