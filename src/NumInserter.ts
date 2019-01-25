@@ -88,7 +88,7 @@ export class NumInserter
     {
         let textEditor = vscode.window.activeTextEditor;
         
-        const selections : vscode.Selection[] = textEditor.selections;
+        const selections : vscode.Selection[] = this.quickSort(textEditor.selections);
         
         const formatStr = settings.formatStr;
         const start = settings.start;
@@ -109,6 +109,36 @@ export class NumInserter
                 }
             }
         ) 
+    }
+
+    private quickSort(selections : vscode.Selection[]) : vscode.Selection[]
+    {
+        let middleIndex : number = selections.length >> 1;
+        if (selections.length <= 1) {
+            return selections;
+        }
+        let middle : vscode.Selection = selections[middleIndex];
+        let left : vscode.Selection[] = [];
+        let right : vscode.Selection[] = [];
+        for (var i=0; i<selections.length; i++){
+            if(i==middleIndex){
+                continue;
+            }
+            let current : vscode.Selection = selections[i];
+            if (current.start.line < middle.start.line) {
+                left.push(current);
+            } else if (current.start.line > middle.start.line) {
+                right.push(current);
+            } else {
+                if (current.start.character <= middle.start.character) {
+                    left.push(current);
+                } else {
+                    right.push(current);
+                }
+            }
+
+        }
+        return this.quickSort(left).concat([middle], this.quickSort(right));
     }
     
     private parseUserInput(input : string) : IInsertSettngs

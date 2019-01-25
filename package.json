@@ -23,24 +23,27 @@
         "Other"
     ],
     "engines": {
-        "vscode": "^1.0.0"
+        "vscode": "^1.1.18"
     },
     "activationEvents": [
         "onCommand:extension.insertNumbers"
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.insertNumbers",
-            "title": "Insert Numbers"
-        }],
-        
-        "keybindings": [{
-            "command": "extension.insertNumbers",
-            "key": "ctrl+alt+n",
-            "mac": "cmd+alt+n",
-            "when": "editorTextFocus"
-        }]
+        "commands": [
+            {
+                "command": "extension.insertNumbers",
+                "title": "Insert Numbers"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.insertNumbers",
+                "key": "ctrl+alt+n",
+                "mac": "cmd+alt+n",
+                "when": "editorTextFocus"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
